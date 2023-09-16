@@ -1,1 +1,1 @@
-# SchoolManagementSys
+School Management System
