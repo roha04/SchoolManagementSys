@@ -1,0 +1,28 @@
+﻿<Window x:Class="WPFScholifyApp.PupilWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFScholifyApp"
+        mc:Ignorable="d"
+        Title="Scholify" Height="450" Width="800" Background="DarkBlue">
+    <Grid RenderTransformOrigin="0.61,0.727">
+        <Image Source="C:\Users\Ярослава\source\repos\WPFScholifyApp\WPFScholifyApp\Presentation\imagesavatar.jpg" HorizontalAlignment="Left" VerticalAlignment="Top" Width="48" Height="48" Margin="62,10,0,0"/>
+        <Image Source="C:\Users\Ярослава\source\repos\WPFScholifyApp\WPFScholifyApp\Presentation\ScholifyLabel.jpg" HorizontalAlignment="Left" VerticalAlignment="Top" Width="454" Height="72" Margin="341,16,0,0"/>
+        <Line X1="174" Y1="0" X2="174" Y2="1000" Stroke="White" StrokeThickness="2" />
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Width="171" Height="49" Margin="0,63,0,0" >
+            <TextBlock x:Name="FirstNameTextBlock" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White"/>
+            <TextBlock x:Name="LastNameTextBlock" VerticalAlignment="Top" HorizontalAlignment="Center"  Foreground="White"/>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Width="171" >
+            <Button Content="Журнал" Click="JournalButton_Click" Margin="0 5 0 0" Height="40" Foreground="DarkBlue" Background="White" BorderBrush="DarkBlue"/>
+            <Button Content="Розклад" Click="ScheduleButton_Click" Margin="0 0 0 0" Height="40" Foreground="DarkBlue" Background="White" BorderBrush="DarkBlue"/>
+            <Button Content="Дошка оголошень" Click="AnnouncementsButton_Click" Margin="0 0 0 0" Height="40" Foreground="DarkBlue" Background="White" BorderBrush="DarkBlue"/>
+            <Button Content="Приватна інформація" Click="PrivateInfoButton_Click" Margin="0 0 0 0" Height="40" Foreground="DarkBlue" Background="White" BorderBrush="DarkBlue"/>
+            <Button Content="Чат" Click="ChatButton_Click" Margin="0 0 0 5" Height="40" Foreground="DarkBlue" Background="White" BorderBrush="DarkBlue"/>
+        </StackPanel >
+        <StackPanel x:Name="InfoPanel" VerticalAlignment="Bottom" HorizontalAlignment="Left" Background="White" Height="316" Margin="174,107,0,0" Width="628" RenderTransformOrigin="0.503,0.796">
+        </StackPanel>
+        <Button Content="Вихід" Click="ExitButton_Click" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="44,0,0,27" Foreground="DarkBlue" Background="White" Width="84" Height="33"/>
+    </Grid>
+</Window>
