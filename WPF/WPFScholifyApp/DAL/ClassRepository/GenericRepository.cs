@@ -1,59 +1,65 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿// <copyright file="GenericRepository.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace WPFScholifyApp.DAL.ClassRepository
 {
-    public class GenericRepository<T> : IGenericRepository<T> where T : class
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Microsoft.EntityFrameworkCore;
+
+    public class GenericRepository<T> : IGenericRepository<T>
+        where T : class
     {
-        private SchoolContext _context = null;
-        private DbSet<T> table = null;
+        private SchoolContext? context = null;
+        private DbSet<T>? table = null;
 
         public GenericRepository()
         {
-            this._context = new SchoolContext();
-            table = _context.Set<T>();
+            this.context = new SchoolContext();
+            this.table = this.context.Set<T>();
         }
 
-        public GenericRepository(SchoolContext _context)
+        public GenericRepository(SchoolContext context)
         {
-            this._context = _context;
-            table = _context.Set<T>();
+            this.context = context;
+            this.table = context.Set<T>();
         }
 
         public IEnumerable<T> GetAll()
         {
-            return table.ToList();
+            return this.table.ToList();
         }
 
         public T GetById(object id)
         {
-            return table.Find(id);
+            return this.table?.Find(id) ?? throw new InvalidOperationException("Entity not found");
         }
 
         public void Insert(T obj)
         {
-            table.Add(obj);
+            this.table?.Add(obj);
         }
 
         public void Update(T obj)
         {
-            table.Attach(obj);
-            _context.Entry(obj).State = EntityState.Modified;
+            this.table?.Attach(obj);
+            if (this.context != null)
+            {
+                this.context.Entry(obj).State = EntityState.Modified;
+            }
         }
 
         public void Delete(object id)
         {
-            T existing = table.Find(id);
-            table.Remove(existing);
+            T? existing = this.table?.Find(id);
+            this.table?.Remove(existing);
         }
 
         public void Save()
         {
-            _context.SaveChanges();
+            this.context?.SaveChanges();
         }
     }
 }

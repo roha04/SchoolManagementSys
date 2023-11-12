@@ -1,18 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// <copyright file="IGenericRepository.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace WPFScholifyApp.DAL.ClassRepository
 {
-    public interface IGenericRepository<T> where T : class
+    using System.Collections.Generic;
+
+    public interface IGenericRepository<T>
+        where T : class
     {
         IEnumerable<T> GetAll();
+
         T GetById(object id);
+
         void Insert(T obj);
+
         void Update(T obj);
+
         void Delete(object id);
+
         void Save();
     }
 }

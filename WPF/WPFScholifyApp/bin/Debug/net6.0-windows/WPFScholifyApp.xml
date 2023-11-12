@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WPFScholifyApp</name>
+    </assembly>
+    <members>
+        <member name="T:WPFScholifyApp.Migrations.InitialSchoolDB">
+            <inheritdoc />
+        </member>
+        <member name="M:WPFScholifyApp.Migrations.InitialSchoolDB.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WPFScholifyApp.Migrations.InitialSchoolDB.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WPFScholifyApp.Migrations.InitialSchoolDB.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:WPFScholifyApp.App">
+            <summary>
+            Interaction logic for App.xaml.
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:WPFScholifyApp.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WPFScholifyApp.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml.
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:WPFScholifyApp.MainWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:WPFScholifyApp.MainWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:WPFScholifyApp.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WPFScholifyApp.PupilWindow">
+            <summary>
+            Interaction logic for PupilWindow.xaml.
+            </summary>
+            <summary>
+            PupilWindow
+            </summary>
+        </member>
+        <member name="M:WPFScholifyApp.PupilWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:WPFScholifyApp.PupilWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:WPFScholifyApp.PupilWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>

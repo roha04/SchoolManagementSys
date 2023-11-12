@@ -1,11 +1,15 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
-using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
+﻿// <copyright file="20231104195125_InitialSchoolDB.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 #nullable disable
 
 namespace WPFScholifyApp.Migrations
 {
+    using System;
+    using Microsoft.EntityFrameworkCore.Migrations;
+    using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
+
     /// <inheritdoc />
     public partial class InitialSchoolDB : Migration
     {
@@ -18,7 +22,7 @@ namespace WPFScholifyApp.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    ClassName = table.Column<string>(type: "text", nullable: false)
+                    ClassName = table.Column<string>(type: "text", nullable: false),
                 },
                 constraints: table =>
                 {
@@ -31,7 +35,7 @@ namespace WPFScholifyApp.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    SubjectName = table.Column<string>(type: "text", nullable: false)
+                    SubjectName = table.Column<string>(type: "text", nullable: false),
                 },
                 constraints: table =>
                 {
@@ -53,7 +57,7 @@ namespace WPFScholifyApp.Migrations
                     Birthday = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     Address = table.Column<string>(type: "text", nullable: false),
                     PhoneNumber = table.Column<string>(type: "text", nullable: false),
-                    Role = table.Column<string>(type: "text", nullable: false)
+                    Role = table.Column<string>(type: "text", nullable: false),
                 },
                 constraints: table =>
                 {
@@ -64,7 +68,7 @@ namespace WPFScholifyApp.Migrations
                 name: "Admins",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false),
                 },
                 constraints: table =>
                 {
@@ -81,7 +85,7 @@ namespace WPFScholifyApp.Migrations
                 name: "Parents",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false),
                 },
                 constraints: table =>
                 {
@@ -99,7 +103,7 @@ namespace WPFScholifyApp.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "integer", nullable: false),
-                    ClassId = table.Column<int>(type: "integer", nullable: false)
+                    ClassId = table.Column<int>(type: "integer", nullable: false),
                 },
                 constraints: table =>
                 {
@@ -123,7 +127,7 @@ namespace WPFScholifyApp.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "integer", nullable: false),
-                    SubjectId = table.Column<int>(type: "integer", nullable: false)
+                    SubjectId = table.Column<int>(type: "integer", nullable: false),
                 },
                 constraints: table =>
                 {
@@ -147,7 +151,7 @@ namespace WPFScholifyApp.Migrations
                 columns: table => new
                 {
                     ParentsId = table.Column<int>(type: "integer", nullable: false),
-                    PupilsId = table.Column<int>(type: "integer", nullable: false)
+                    PupilsId = table.Column<int>(type: "integer", nullable: false),
                 },
                 constraints: table =>
                 {
@@ -171,7 +175,7 @@ namespace WPFScholifyApp.Migrations
                 columns: table => new
                 {
                     ClassesId = table.Column<int>(type: "integer", nullable: false),
-                    TeachersId = table.Column<int>(type: "integer", nullable: false)
+                    TeachersId = table.Column<int>(type: "integer", nullable: false),
                 },
                 constraints: table =>
                 {
@@ -201,7 +205,7 @@ namespace WPFScholifyApp.Migrations
                     Date = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     ClassId = table.Column<int>(type: "integer", nullable: false),
                     TeacherId = table.Column<int>(type: "integer", nullable: false),
-                    SubjectId = table.Column<int>(type: "integer", nullable: false)
+                    SubjectId = table.Column<int>(type: "integer", nullable: false),
                 },
                 constraints: table =>
                 {
@@ -233,7 +237,7 @@ namespace WPFScholifyApp.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false),
                     DayOfWeek = table.Column<string>(type: "text", nullable: false),
                     Timeslot = table.Column<string>(type: "text", nullable: false),
-                    TeacherId = table.Column<int>(type: "integer", nullable: false)
+                    TeacherId = table.Column<int>(type: "integer", nullable: false),
                 },
                 constraints: table =>
                 {
@@ -257,7 +261,7 @@ namespace WPFScholifyApp.Migrations
                 columns: table => new
                 {
                     SchedulesId = table.Column<int>(type: "integer", nullable: false),
-                    SubjectsId = table.Column<int>(type: "integer", nullable: false)
+                    SubjectsId = table.Column<int>(type: "integer", nullable: false),
                 },
                 constraints: table =>
                 {

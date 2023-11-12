@@ -66,3 +66,4 @@ C:\Users\Ярослава\source\repos\WPFScholifyApp\WPFScholifyApp\bin\Debug\n
 C:\Users\Ярослава\source\repos\WPFScholifyApp\WPFScholifyApp\bin\Debug\net6.0-windows\System.Diagnostics.EventLog.dll
 C:\Users\Ярослава\source\repos\WPFScholifyApp\WPFScholifyApp\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
 C:\Users\Ярослава\source\repos\WPFScholifyApp\WPFScholifyApp\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll
+C:\Users\Ярослава\source\repos\WPFScholifyApp\WPFScholifyApp\bin\Debug\net6.0-windows\WPFScholifyApp.xml
