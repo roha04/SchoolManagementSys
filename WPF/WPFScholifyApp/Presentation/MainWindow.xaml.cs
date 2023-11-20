@@ -10,6 +10,7 @@ namespace WPFScholifyApp
     using WPFScholifyApp.BLL;
     using WPFScholifyApp.DAL.ClassRepository;
     using WPFScholifyApp.DAL.DBClasses;
+    using WPFScholifyApp.Presentation;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml.
@@ -45,6 +46,20 @@ namespace WPFScholifyApp
                         pupilWindow.FirstNameTextBlock.Text = userService.Authenticate(email, password, selectedRole).FirstName;
                         pupilWindow.LastNameTextBlock.Text = userService.Authenticate(email, password, selectedRole).LastName;
                         pupilWindow.Show();
+                    }
+                    else if (selectedRole == "батьки")
+                    {
+                        ParentWindow parentWindow = new ParentWindow();
+                        parentWindow.FirstNameTextBlock.Text = userService.Authenticate(email, password, selectedRole).FirstName;
+                        parentWindow.LastNameTextBlock.Text = userService.Authenticate(email, password, selectedRole).LastName;
+                        parentWindow.Show();
+                    }
+                    else if (selectedRole == "вчитель")
+                    {
+                        TeacherWindow teacherWindow = new TeacherWindow();
+                        teacherWindow.FirstNameTextBlock.Text = userService.Authenticate(email, password, selectedRole).FirstName;
+                        teacherWindow.LastNameTextBlock.Text = userService.Authenticate(email, password, selectedRole).LastName;
+                        teacherWindow.Show();
                     }
 
                     this.Close();

@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFScholifyApp"
         mc:Ignorable="d"
-        Title="Scholify" Height="450" Width="800" Background="DarkBlue">
+        Title="Scholify" Height="450" Width="800" Background="DarkBlue"
+       >
+        
     <Grid RenderTransformOrigin="0.61,0.727">
-        <Image Source="C:\Users\Ярослава\source\repos\WPFScholifyApp\WPFScholifyApp\Presentation\imagesavatar.jpg" HorizontalAlignment="Left" VerticalAlignment="Top" Width="48" Height="48" Margin="62,10,0,0"/>
-        <Image Source="C:\Users\Ярослава\source\repos\WPFScholifyApp\WPFScholifyApp\Presentation\ScholifyLabel.jpg" HorizontalAlignment="Left" VerticalAlignment="Top" Width="454" Height="72" Margin="341,16,0,0"/>
+        <Image Source="C:\Users\Rostyslav\Source\Repos\Scholify\project\WPF\WPFScholifyApp\Presentation\imagesavatar.jpg" HorizontalAlignment="Left" VerticalAlignment="Top" Width="48" Height="48" Margin="62,10,0,0"/>
+        <Image Source="C:\Users\Rostyslav\Source\Repos\Scholify\project\WPF\WPFScholifyApp\Presentation\ScholifyLabel.jpg" HorizontalAlignment="Left" VerticalAlignment="Top" Width="454" Height="72" Margin="341,16,0,0"/>
         <Line X1="174" Y1="0" X2="174" Y2="1000" Stroke="White" StrokeThickness="2" />
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Width="171" Height="49" Margin="0,63,0,0" >
             <TextBlock x:Name="FirstNameTextBlock" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White"/>

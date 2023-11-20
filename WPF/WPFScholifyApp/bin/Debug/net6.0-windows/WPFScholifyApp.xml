@@ -47,6 +47,37 @@
             InitializeComponent
             </summary>
         </member>
+        <member name="T:WPFScholifyApp.Presentation.ParentWindow">
+            <summary>
+            Interaction logic for ParentWindow.xaml.
+            </summary>
+            <summary>
+            ParentWindow
+            </summary>
+        </member>
+        <member name="M:WPFScholifyApp.Presentation.ParentWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:WPFScholifyApp.Presentation.ParentWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:WPFScholifyApp.Presentation.ParentWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WPFScholifyApp.Presentation.TeacherWindow">
+            <summary>
+            Interaction logic for TeacherWindow.xaml.
+            </summary>
+            <summary>
+            TeacherWindow
+            </summary>
+        </member>
+        <member name="M:WPFScholifyApp.Presentation.TeacherWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
         <member name="T:WPFScholifyApp.PupilWindow">
             <summary>
             Interaction logic for PupilWindow.xaml.

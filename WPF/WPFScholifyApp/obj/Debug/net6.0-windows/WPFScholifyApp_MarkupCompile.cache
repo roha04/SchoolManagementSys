@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Ярослава\source\repos\WPFScholifyApp\WPFScholifyApp\obj\Debug\net6.0-windows\
+C:\Users\Rostyslav\Source\Repos\Scholify\project\WPF\WPFScholifyApp\obj\Debug\net6.0-windows\
 WPFScholifyApp
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 
-3-887116577
+51001637386
 
-20-2014987319
-2261504445559
-Presentation\App.xaml;Presentation\MainWindow.xaml;Presentation\PupilWindow.xaml;
+221086428036
+226-1432199204
+Presentation\App.xaml;Presentation\MainWindow.xaml;Presentation\ParentWindow.xaml;Presentation\PupilWindow.xaml;Presentation\TeacherWindow.xaml;
 
 False
 

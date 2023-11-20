@@ -40,7 +40,7 @@ namespace WPFScholifyApp.DAL.ClassRepository
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=ScholifyDB;Username=postgres;Password=slava123");
+            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=Scholify12;Username=postgres;Password=rohasuper25");
         }
     }
 
@@ -49,7 +49,7 @@ namespace WPFScholifyApp.DAL.ClassRepository
         public SchoolContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<SchoolContext>();
-            optionsBuilder.UseNpgsql("Data Source=ScholifyDB.db");
+            optionsBuilder.UseNpgsql("Data Source=Scholify12.db");
 
             return new SchoolContext(optionsBuilder.Options);
         }
