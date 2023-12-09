@@ -52,21 +52,6 @@ namespace WPFScholifyApp.Migrations
                     b.ToTable("ParentsPupil");
                 });
 
-            modelBuilder.Entity("ScheduleSubject", b =>
-                {
-                    b.Property<int>("SchedulesId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("SubjectsId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("SchedulesId", "SubjectsId");
-
-                    b.HasIndex("SubjectsId");
-
-                    b.ToTable("ScheduleSubject");
-                });
-
             modelBuilder.Entity("WPFScholifyApp.DAL.DBClasses.Admin", b =>
                 {
                     b.Property<int>("Id")
@@ -86,7 +71,6 @@ namespace WPFScholifyApp.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ClassName")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -103,22 +87,21 @@ namespace WPFScholifyApp.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Attendance")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("ClassId")
+                    b.Property<int?>("ClassId")
                         .HasColumnType("integer");
 
-                    b.Property<DateTime>("Date")
+                    b.Property<DateTime?>("Date")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<int>("Grade")
+                    b.Property<int?>("Grade")
                         .HasColumnType("integer");
 
-                    b.Property<int>("SubjectId")
+                    b.Property<int?>("SubjectId")
                         .HasColumnType("integer");
 
-                    b.Property<int>("TeacherId")
+                    b.Property<int?>("TeacherId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
@@ -130,6 +113,41 @@ namespace WPFScholifyApp.Migrations
                     b.HasIndex("TeacherId");
 
                     b.ToTable("DayBooks");
+                });
+
+            modelBuilder.Entity("WPFScholifyApp.DAL.DBClasses.DayOfWeek", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Day")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("DayOfWeeks");
+                });
+
+            modelBuilder.Entity("WPFScholifyApp.DAL.DBClasses.LessonTime", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("End")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Start")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LessonTimes");
                 });
 
             modelBuilder.Entity("WPFScholifyApp.DAL.DBClasses.Parents", b =>
@@ -147,7 +165,7 @@ namespace WPFScholifyApp.Migrations
                     b.Property<int>("Id")
                         .HasColumnType("integer");
 
-                    b.Property<int>("ClassId")
+                    b.Property<int?>("ClassId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
@@ -160,20 +178,35 @@ namespace WPFScholifyApp.Migrations
             modelBuilder.Entity("WPFScholifyApp.DAL.DBClasses.Schedule", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    b.Property<string>("DayOfWeek")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("TeacherId")
+                    b.Property<int?>("ClassId")
                         .HasColumnType("integer");
 
-                    b.Property<string>("Timeslot")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<int?>("DayOfWeekId")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("LessonTimeId")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("SubjectId")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("TeacherId")
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ClassId");
+
+                    b.HasIndex("DayOfWeekId");
+
+                    b.HasIndex("LessonTimeId");
+
+                    b.HasIndex("SubjectId");
 
                     b.HasIndex("TeacherId");
 
@@ -189,7 +222,6 @@ namespace WPFScholifyApp.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("SubjectName")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -202,7 +234,7 @@ namespace WPFScholifyApp.Migrations
                     b.Property<int>("Id")
                         .HasColumnType("integer");
 
-                    b.Property<int>("SubjectId")
+                    b.Property<int?>("SubjectId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
@@ -221,42 +253,33 @@ namespace WPFScholifyApp.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTime>("Birthday")
+                    b.Property<DateTime?>("Birthday")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("FirstName")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Gender")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("MiddleName")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Password")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("PhoneNumber")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Role")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -294,21 +317,6 @@ namespace WPFScholifyApp.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("ScheduleSubject", b =>
-                {
-                    b.HasOne("WPFScholifyApp.DAL.DBClasses.Schedule", null)
-                        .WithMany()
-                        .HasForeignKey("SchedulesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("WPFScholifyApp.DAL.DBClasses.Subject", null)
-                        .WithMany()
-                        .HasForeignKey("SubjectsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("WPFScholifyApp.DAL.DBClasses.Admin", b =>
                 {
                     b.HasOne("WPFScholifyApp.DAL.DBClasses.User", "User")
@@ -324,21 +332,15 @@ namespace WPFScholifyApp.Migrations
                 {
                     b.HasOne("WPFScholifyApp.DAL.DBClasses.Class", "Class")
                         .WithMany("DayBooks")
-                        .HasForeignKey("ClassId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ClassId");
 
                     b.HasOne("WPFScholifyApp.DAL.DBClasses.Subject", "Subject")
                         .WithMany("DayBooks")
-                        .HasForeignKey("SubjectId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("SubjectId");
 
                     b.HasOne("WPFScholifyApp.DAL.DBClasses.Teacher", "Teacher")
                         .WithMany("DayBooks")
-                        .HasForeignKey("TeacherId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("TeacherId");
 
                     b.Navigation("Class");
 
@@ -362,9 +364,7 @@ namespace WPFScholifyApp.Migrations
                 {
                     b.HasOne("WPFScholifyApp.DAL.DBClasses.Class", "Class")
                         .WithMany("Pupils")
-                        .HasForeignKey("ClassId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ClassId");
 
                     b.HasOne("WPFScholifyApp.DAL.DBClasses.User", "User")
                         .WithOne("Pupil")
@@ -379,19 +379,25 @@ namespace WPFScholifyApp.Migrations
 
             modelBuilder.Entity("WPFScholifyApp.DAL.DBClasses.Schedule", b =>
                 {
-                    b.HasOne("WPFScholifyApp.DAL.DBClasses.Class", "Class")
-                        .WithOne("Schedule")
-                        .HasForeignKey("WPFScholifyApp.DAL.DBClasses.Schedule", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("WPFScholifyApp.DAL.DBClasses.Class", null)
+                        .WithMany("Schedules")
+                        .HasForeignKey("ClassId");
+
+                    b.HasOne("WPFScholifyApp.DAL.DBClasses.DayOfWeek", null)
+                        .WithMany("Schedules")
+                        .HasForeignKey("DayOfWeekId");
+
+                    b.HasOne("WPFScholifyApp.DAL.DBClasses.LessonTime", null)
+                        .WithMany("Schedules")
+                        .HasForeignKey("LessonTimeId");
+
+                    b.HasOne("WPFScholifyApp.DAL.DBClasses.Subject", null)
+                        .WithMany("Schedules")
+                        .HasForeignKey("SubjectId");
 
                     b.HasOne("WPFScholifyApp.DAL.DBClasses.Teacher", "Teacher")
                         .WithMany("Schedules")
-                        .HasForeignKey("TeacherId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Class");
+                        .HasForeignKey("TeacherId");
 
                     b.Navigation("Teacher");
                 });
@@ -406,9 +412,7 @@ namespace WPFScholifyApp.Migrations
 
                     b.HasOne("WPFScholifyApp.DAL.DBClasses.Subject", "Subject")
                         .WithMany("Teachers")
-                        .HasForeignKey("SubjectId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("SubjectId");
 
                     b.Navigation("Subject");
 
@@ -421,13 +425,24 @@ namespace WPFScholifyApp.Migrations
 
                     b.Navigation("Pupils");
 
-                    b.Navigation("Schedule")
-                        .IsRequired();
+                    b.Navigation("Schedules");
+                });
+
+            modelBuilder.Entity("WPFScholifyApp.DAL.DBClasses.DayOfWeek", b =>
+                {
+                    b.Navigation("Schedules");
+                });
+
+            modelBuilder.Entity("WPFScholifyApp.DAL.DBClasses.LessonTime", b =>
+                {
+                    b.Navigation("Schedules");
                 });
 
             modelBuilder.Entity("WPFScholifyApp.DAL.DBClasses.Subject", b =>
                 {
                     b.Navigation("DayBooks");
+
+                    b.Navigation("Schedules");
 
                     b.Navigation("Teachers");
                 });
@@ -441,17 +456,13 @@ namespace WPFScholifyApp.Migrations
 
             modelBuilder.Entity("WPFScholifyApp.DAL.DBClasses.User", b =>
                 {
-                    b.Navigation("Admin")
-                        .IsRequired();
+                    b.Navigation("Admin");
 
-                    b.Navigation("Parents")
-                        .IsRequired();
+                    b.Navigation("Parents");
 
-                    b.Navigation("Pupil")
-                        .IsRequired();
+                    b.Navigation("Pupil");
 
-                    b.Navigation("Teacher")
-                        .IsRequired();
+                    b.Navigation("Teacher");
                 });
 #pragma warning restore 612, 618
         }

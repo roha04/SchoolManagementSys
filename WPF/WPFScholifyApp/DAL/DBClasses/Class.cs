@@ -12,12 +12,16 @@ namespace WPFScholifyApp.DAL.DBClasses
 
         public string? ClassName { get; set; }
 
-        public virtual Schedule? Schedule { get; set; }
+        public virtual ICollection<Subject>? Subjects { get; set; }
+
+        public virtual ICollection<Advertisement>? Advertisements { get; set; }
 
         public virtual ICollection<Pupil>? Pupils { get; set; }
 
         public virtual ICollection<Teacher>? Teachers { get; set; }
 
         public virtual ICollection<DayBook>? DayBooks { get; set; }
+
+        public virtual ICollection<Schedule>? Schedules { get; set; }
     }
 }

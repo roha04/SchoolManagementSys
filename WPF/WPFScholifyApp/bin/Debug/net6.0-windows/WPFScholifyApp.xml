@@ -16,6 +16,43 @@
         <member name="M:WPFScholifyApp.Migrations.InitialSchoolDB.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:WPFScholifyApp.Migrations.ScheduleMigration">
+            <inheritdoc />
+        </member>
+        <member name="M:WPFScholifyApp.Migrations.ScheduleMigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WPFScholifyApp.Migrations.ScheduleMigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WPFScholifyApp.Migrations.ScheduleMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:WPFScholifyApp.Migrations.NewMigration">
+            <inheritdoc />
+        </member>
+        <member name="M:WPFScholifyApp.Migrations.NewMigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WPFScholifyApp.Migrations.NewMigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WPFScholifyApp.Migrations.NewMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:WPFScholifyApp.AdminWindow">
+            <summary>
+            Interaction logic for AdminWindow.xaml.
+            </summary>
+            <summary>
+            AdminWindow
+            </summary>
+        </member>
+        <member name="M:WPFScholifyApp.AdminWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
         <member name="T:WPFScholifyApp.App">
             <summary>
             Interaction logic for App.xaml.
@@ -29,6 +66,110 @@
             InitializeComponent
             </summary>
         </member>
+        <member name="T:WPFScholifyApp.Presentation.CreateAdvertisements">
+            <summary>
+            Interaction logic for CreateAdvertisements.xaml.
+            </summary>
+            <summary>
+            CreateAdvertisements
+            </summary>
+        </member>
+        <member name="M:WPFScholifyApp.Presentation.CreateAdvertisements.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WPFScholifyApp.Presentation.CreateClass">
+            <summary>
+            Interaction logic for CreateClass.xaml.
+            </summary>
+            <summary>
+            CreateClass
+            </summary>
+        </member>
+        <member name="M:WPFScholifyApp.Presentation.CreateClass.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WPFScholifyApp.Presentation.CreateParents">
+            <summary>
+            Interaction logic for CreateParents.xaml.
+            </summary>
+            <summary>
+            CreateParents
+            </summary>
+        </member>
+        <member name="M:WPFScholifyApp.Presentation.CreateParents.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WPFScholifyApp.Presentation.CreateSchedule">
+            <summary>
+            Interaction logic for CreateTeacher.xaml.
+            </summary>
+            <summary>
+            CreateSchedule
+            </summary>
+        </member>
+        <member name="M:WPFScholifyApp.Presentation.CreateSchedule.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WPFScholifyApp.Presentation.CreateSubject">
+            <summary>
+            Interaction logic for CreateSubject.xaml.
+            </summary>
+            <summary>
+            CreateSubject
+            </summary>
+        </member>
+        <member name="M:WPFScholifyApp.Presentation.CreateSubject.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WPFScholifyApp.Presentation.CreateTeacher">
+            <summary>
+            Interaction logic for CreateTecher.xaml.
+            </summary>
+            <summary>
+            CreateTeacher
+            </summary>
+        </member>
+        <member name="M:WPFScholifyApp.Presentation.CreateTeacher.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WPFScholifyApp.Presentation.CreateUser">
+            <summary>
+            Interaction logic for CreateUser.xaml.
+            </summary>
+            <summary>
+            CreateUser
+            </summary>
+        </member>
+        <member name="M:WPFScholifyApp.Presentation.CreateUser.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WPFScholifyApp.Presentation.LookUsers">
+            <summary>
+            Interaction logic for LookUsers.xaml.
+            </summary>
+            <summary>
+            LookUsers
+            </summary>
+        </member>
+        <member name="M:WPFScholifyApp.Presentation.LookUsers.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
         <member name="T:WPFScholifyApp.MainWindow">
             <summary>
             Interaction logic for MainWindow.xaml.
@@ -37,43 +178,20 @@
             MainWindow
             </summary>
         </member>
-        <member name="M:WPFScholifyApp.MainWindow.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:WPFScholifyApp.MainWindow"/> class.
-            </summary>
-        </member>
         <member name="M:WPFScholifyApp.MainWindow.InitializeComponent">
             <summary>
             InitializeComponent
             </summary>
         </member>
-        <member name="T:WPFScholifyApp.Presentation.ParentWindow">
+        <member name="T:WPFScholifyApp.ParentsWindow">
             <summary>
-            Interaction logic for ParentWindow.xaml.
+            Interaction logic for ParentsWindow.xaml.
             </summary>
             <summary>
-            ParentWindow
-            </summary>
-        </member>
-        <member name="M:WPFScholifyApp.Presentation.ParentWindow.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:WPFScholifyApp.Presentation.ParentWindow"/> class.
+            ParentsWindow
             </summary>
         </member>
-        <member name="M:WPFScholifyApp.Presentation.ParentWindow.InitializeComponent">
-            <summary>
-            InitializeComponent
-            </summary>
-        </member>
-        <member name="T:WPFScholifyApp.Presentation.TeacherWindow">
-            <summary>
-            Interaction logic for TeacherWindow.xaml.
-            </summary>
-            <summary>
-            TeacherWindow
-            </summary>
-        </member>
-        <member name="M:WPFScholifyApp.Presentation.TeacherWindow.InitializeComponent">
+        <member name="M:WPFScholifyApp.ParentsWindow.InitializeComponent">
             <summary>
             InitializeComponent
             </summary>
@@ -86,12 +204,20 @@
             PupilWindow
             </summary>
         </member>
-        <member name="M:WPFScholifyApp.PupilWindow.#ctor">
+        <member name="M:WPFScholifyApp.PupilWindow.InitializeComponent">
             <summary>
-            Initializes a new instance of the <see cref="T:WPFScholifyApp.PupilWindow"/> class.
+            InitializeComponent
             </summary>
         </member>
-        <member name="M:WPFScholifyApp.PupilWindow.InitializeComponent">
+        <member name="T:WPFScholifyApp.TeacherWindow">
+            <summary>
+            Interaction logic for TeacherWindow.xaml.
+            </summary>
+            <summary>
+            TeacherWindow
+            </summary>
+        </member>
+        <member name="M:WPFScholifyApp.TeacherWindow.InitializeComponent">
             <summary>
             InitializeComponent
             </summary>

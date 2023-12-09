@@ -7,6 +7,7 @@ namespace WPFScholifyApp.DAL.ClassRepository
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Linq.Expressions;
     using Microsoft.EntityFrameworkCore;
 
     public class GenericRepository<T> : IGenericRepository<T>
@@ -30,6 +31,11 @@ namespace WPFScholifyApp.DAL.ClassRepository
         public IEnumerable<T> GetAll()
         {
             return this.table.ToList();
+        }
+
+        public IQueryable<T> GetAllq()
+        {
+            return this.table!;
         }
 
         public T GetById(object id)
@@ -60,6 +66,28 @@ namespace WPFScholifyApp.DAL.ClassRepository
         public void Save()
         {
             this.context?.SaveChanges();
+        }
+
+        public IQueryable<T> Include(params Expression<Func<T, object>>[] includes)
+        {
+            if (this.table == null)
+            {
+                throw new InvalidOperationException("Table not initialized");
+            }
+
+            IQueryable<T> query = this.table;
+
+            foreach (var include in includes)
+            {
+                if (include.Body is MemberExpression memberExpression && memberExpression.Type.IsClass)
+                {
+                    query = memberExpression.Type.IsNullableReferenceType()
+                        ? query.Include(include)
+                        : query;
+                }
+            }
+
+            return query;
         }
     }
 }

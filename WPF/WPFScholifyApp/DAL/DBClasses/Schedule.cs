@@ -4,22 +4,40 @@
 
 namespace WPFScholifyApp.DAL.DBClasses
 {
-    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
     public class Schedule
     {
-        [ForeignKey("Class")]
         public int Id { get; set; }
 
-        public string? DayOfWeek { get; set; }
+        public int TeacherId { get; internal set; }
 
-        public string? Timeslot { get; set; }
-
-        public virtual Class? Class { get; set; }
-
+        [ForeignKey("TeacherId")]
         public virtual Teacher? Teacher { get; set; }
 
-        public virtual ICollection<Subject>? Subjects { get; set; }
+        [Required]
+        public int ClassId { get; internal set; }
+
+        [ForeignKey("ClassId")]
+        public virtual Class? Class { get; set; }
+
+        [Required]
+        public int DayOfWeekId { get; set; }
+
+        [ForeignKey("DayOfWeekId")]
+        public virtual DayOfWeek? DayOfWeek { get; set; }
+
+        [Required]
+        public int LessonTimeId { get; set; }
+
+        [ForeignKey("LessonTimeId")]
+        public virtual LessonTime? LessonTime { get; set; }
+
+        [Required]
+        public int SubjectId { get; set; }
+
+        [ForeignKey("SubjectId")]
+        public virtual Subject? Subject { get; set; }
     }
 }
