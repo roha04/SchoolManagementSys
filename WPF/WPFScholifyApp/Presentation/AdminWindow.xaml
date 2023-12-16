@@ -8,16 +8,68 @@
         Title="Scholify" Height="450" Width="800" Background="DarkBlue">
     <Viewbox Stretch="Uniform">
         <Grid RenderTransformOrigin="0.61,0.727" Width="1960">
+            <Grid.Resources>
+                <Style x:Key="ButtonStyle" TargetType="Button">
+                    <Setter Property="FontSize" Value="30"/>
+                    <Setter Property="Foreground" Value="DarkBlue"/>
+                    <Setter Property="Background" Value="White"/>
+                    <Setter Property="BorderBrush" Value="DarkBlue"/>
+                    <Setter Property="Height" Value="70"/>
+                    <Setter Property="Width" Value="415"/>
+                    <Setter Property="Margin" Value="0,20,0,0"/>
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" CornerRadius="10">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="LightBlue"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+
+                <Style x:Key="ExitStyle" TargetType="Button">
+                    <Setter Property="FontSize" Value="30"/>
+                    <Setter Property="Foreground" Value="DarkBlue"/>
+                    <Setter Property="Background" Value="White"/>
+                    <Setter Property="BorderBrush" Value="DarkBlue"/>
+                    <Setter Property="Height" Value="60"/>
+                    <Setter Property="Width" Value="193"/>
+                    <Setter Property="Margin" Value="141,0,0,37"/>
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                    <Setter Property="VerticalAlignment" Value="Bottom"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" CornerRadius="10">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="LightBlue"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Resources>
             <Image Source="C:\Users\Ярослава\source\repos\WPFScholifyApp\WPFScholifyApp\Presentation\imagesavatar.jpg" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" Height="148" Margin="164,76,0,0"/>
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Width="348" Height="118" Margin="69,252,0,0" >
                 <TextBlock x:Name="FirstNameTextBlock" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White" FontSize="30"/>
                 <TextBlock x:Name="LastNameTextBlock" VerticalAlignment="Top" HorizontalAlignment="Center"  Foreground="White" FontSize="30"/>
             </StackPanel>
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Width="416" Height="480" Margin="30,407,0,0" >
-                <Button Content="Класи" FontSize="30" Click="ClassButton_Click" Height="70" Foreground="DarkBlue" Background="White" BorderBrush="DarkBlue"/>
-                <Button Content="Вчителі" FontSize="30" Click="TeachersButton_Click" Margin="0 20 0 0" Height="70" Foreground="DarkBlue" Background="White" BorderBrush="DarkBlue"/>
-                <Button Content="Батьки" FontSize="30" Click="ParentsButton_Click" Margin="0 20 0 0" Height="70" Foreground="DarkBlue" Background="White" BorderBrush="DarkBlue"/>
-                <Button Content="Розклад" FontSize="30" Click="ScheduleButton_Click" Margin="0 20 0 0" Height="70" Foreground="DarkBlue" Background="White" BorderBrush="DarkBlue"/>
+                <Button Content="Класи" Style="{StaticResource ButtonStyle}" Click="ClassButton_Click"/>
+                <Button Content="Вчителі" Style="{StaticResource ButtonStyle}" Click="TeachersButton_Click"/>
+                <Button Content="Батьки" Style="{StaticResource ButtonStyle}" Click="ParentsButton_Click"/>
+                <Button Content="Розклад" Style="{StaticResource ButtonStyle}" Click="ScheduleButton_Click"/>
             </StackPanel >
             <Line X1="490" Y1="0" X2="490" Y2="1100" Stroke="White" StrokeThickness="20"/>
             <Line X1="480" Y1="1030" X2="1965" Y2="1030" Stroke="White" StrokeThickness="20"/>
@@ -55,7 +107,7 @@
                     <Button x:Name="nextWeek" FontSize="30" Width="427" Height="70" Content="Наступний тиждень" HorizontalAlignment="Right" Foreground="White" Background="DarkBlue" VerticalAlignment="Top" Margin="0,-70,0,0" Tag="7" Click="ChangeDate" />
                 </StackPanel>
             </StackPanel>
-            <Button Content="Вихід" FontSize="30" Click="ExitButton_Click" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="141,0,0,37" Foreground="DarkBlue" Background="White" Width="193" Height="55"/>
+            <Button Content="Вихід" Style="{StaticResource ExitStyle}" Click="ExitButton_Click"/>
         </Grid>
     </Viewbox>
 </Window>

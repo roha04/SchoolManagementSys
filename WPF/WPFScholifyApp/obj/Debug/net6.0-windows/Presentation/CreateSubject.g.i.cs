@@ -69,7 +69,7 @@ namespace WPFScholifyApp.Presentation {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WPFScholifyApp;V1.0.0.0;component/presentation/createsubject.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WPFScholifyApp;component/presentation/createsubject.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Presentation\CreateSubject.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

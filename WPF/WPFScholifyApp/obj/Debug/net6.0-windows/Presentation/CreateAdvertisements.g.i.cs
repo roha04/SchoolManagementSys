@@ -69,7 +69,7 @@ namespace WPFScholifyApp.Presentation {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WPFScholifyApp;V1.0.0.0;component/presentation/createadvertisements.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WPFScholifyApp;component/presentation/createadvertisements.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Presentation\CreateAdvertisements.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

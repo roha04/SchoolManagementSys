@@ -28,12 +28,12 @@ namespace WPFScholifyApp.DAL.ClassRepository
             this.table = context.Set<T>();
         }
 
-        public IEnumerable<T> GetAll()
+        public virtual IEnumerable<T> GetAll()
         {
             return this.table.ToList();
         }
 
-        public IQueryable<T> GetAllq()
+        public virtual IQueryable<T> GetAllq()
         {
             return this.table!;
         }
@@ -43,12 +43,12 @@ namespace WPFScholifyApp.DAL.ClassRepository
             return this.table?.Find(id) ?? throw new InvalidOperationException("Entity not found");
         }
 
-        public void Insert(T obj)
+        public virtual void Insert(T obj)
         {
             this.table?.Add(obj);
         }
 
-        public void Update(T obj)
+        public virtual void Update(T obj)
         {
             this.table?.Attach(obj);
             if (this.context != null)
@@ -57,13 +57,13 @@ namespace WPFScholifyApp.DAL.ClassRepository
             }
         }
 
-        public void Delete(object id)
+        public virtual void Delete(object id)
         {
             T? existing = this.table?.Find(id);
             this.table?.Remove(existing);
         }
 
-        public void Save()
+        public virtual void Save()
         {
             this.context?.SaveChanges();
         }

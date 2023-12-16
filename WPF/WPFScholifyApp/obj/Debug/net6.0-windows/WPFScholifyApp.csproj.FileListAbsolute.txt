@@ -91,3 +91,6 @@ C:\Users\Ярослава\source\repos\WPFScholifyApp\WPFScholifyApp\bin\Debug\n
 C:\Users\Ярослава\source\repos\WPFScholifyApp\WPFScholifyApp\bin\Debug\net6.0-windows\Serilog.Sinks.File.dll
 C:\Users\Ярослава\source\repos\WPFScholifyApp\WPFScholifyApp\obj\Debug\net6.0-windows\Presentation\CreateAdvertisements.g.cs
 C:\Users\Ярослава\source\repos\WPFScholifyApp\WPFScholifyApp\obj\Debug\net6.0-windows\Presentation\CreateAdvertisements.baml
+C:\Users\Ярослава\source\repos\WPFScholifyApp\WPFScholifyApp\bin\Debug\net6.0-windows\Castle.Core.dll
+C:\Users\Ярослава\source\repos\WPFScholifyApp\WPFScholifyApp\bin\Debug\net6.0-windows\FluentAssertions.dll
+C:\Users\Ярослава\source\repos\WPFScholifyApp\WPFScholifyApp\bin\Debug\net6.0-windows\Moq.dll

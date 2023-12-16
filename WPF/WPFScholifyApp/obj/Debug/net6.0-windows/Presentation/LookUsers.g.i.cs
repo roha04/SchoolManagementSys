@@ -125,7 +125,7 @@ namespace WPFScholifyApp.Presentation {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WPFScholifyApp;V1.0.0.0;component/presentation/lookusers.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WPFScholifyApp;component/presentation/lookusers.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Presentation\LookUsers.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

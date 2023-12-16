@@ -30,6 +30,12 @@ namespace WPFScholifyApp.BLL
             return this.subjectRepository.GetAll().Where(x => x.ClassId == classId).ToList();
         }
 
+        public List<Subject> GetAllSubjects()
+        {
+            var classes = this.subjectRepository?.GetAll().OrderBy(x => x.SubjectName).ToList();
+            return classes!;
+        }
+
         public void SaveSubject(Subject subject, Teacher teacher)
         {
             this.subjectRepository.Insert(subject);

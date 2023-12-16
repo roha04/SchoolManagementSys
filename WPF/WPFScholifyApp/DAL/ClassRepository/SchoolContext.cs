@@ -134,7 +134,8 @@ namespace WPFScholifyApp.DAL.ClassRepository
                 new DBClasses.DayOfWeek { Id = 8, Day = "04.12.2023", Date = new DateTime(2023, 12, 4).ToUniversalTime() },
                 new DBClasses.DayOfWeek { Id = 9, Day = "05.12.2023", Date = new DateTime(2023, 12, 5).ToUniversalTime() },
                 new DBClasses.DayOfWeek { Id = 10, Day = "06.12.2023", Date = new DateTime(2023, 12, 6).ToUniversalTime() },
-                new DBClasses.DayOfWeek { Id = 11, Day = "07.12.2023", Date = new DateTime(2023, 12, 7).ToUniversalTime() });
+                new DBClasses.DayOfWeek { Id = 11, Day = "07.12.2023", Date = new DateTime(2023, 12, 7).ToUniversalTime() },
+                new DBClasses.DayOfWeek { Id = 11, Day = "08.12.2023", Date = new DateTime(2023, 12, 8).ToUniversalTime() });
 
             modelBuilder.Entity<Subject>().HasData(
                 new Subject { Id = 1, SubjectName = "Алгебра", ClassId = 1 },
