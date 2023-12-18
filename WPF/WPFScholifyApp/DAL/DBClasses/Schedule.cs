@@ -17,7 +17,7 @@ namespace WPFScholifyApp.DAL.DBClasses
         public virtual Teacher? Teacher { get; set; }
 
         [Required]
-        public int ClassId { get; internal set; }
+        public int ClassId { get; /*internal*/ set; }
 
         [ForeignKey("ClassId")]
         public virtual Class? Class { get; set; }
