@@ -1,0 +1,22 @@
+﻿<Window x:Class="WPFScholifyApp.Presentation.CreateSchedule"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFScholifyApp.Presentation"
+        mc:Ignorable="d"
+        Title="Створити розклад" Height="400" Width="400" Background="DarkBlue">
+    <Grid>
+        <StackPanel>
+            <Label Width="92" Content="Предмет:" HorizontalContentAlignment="Center" Margin="0,0,0,10" Foreground="White"/>
+            <ComboBox x:Name="SubjectComboBox" Foreground="DarkBlue" Background="White" RenderTransformOrigin="0.513,0.619" ItemsSource="{Binding CbItems2}" Margin="0,0,0,10" Width="253"/>
+            <Label Width="92" Content="Клас:" HorizontalContentAlignment="Center" Margin="0,0,0,10" Foreground="White"/>
+            <Label Width="96" x:Name="ClassLabel" HorizontalContentAlignment="Center" Height="26" Margin="0,0,0,10" Foreground="White"/>
+            <Label Width="92" Content="Час" HorizontalContentAlignment="Center" Height="27" Margin="0,0,0,10" Foreground="White"/>
+            <ComboBox x:Name="TimeComboBox" Foreground="DarkBlue" Background="White" RenderTransformOrigin="0.513,0.619" ItemsSource="{Binding CbItems}" SelectionChanged="ClassComboBox_SelectionChanged" Margin="0,0,0,10" Width="253"/>
+            <Label Width="92" Content="Дата" HorizontalContentAlignment="Center" Margin="0,10,0,10" Foreground="White"/>
+            <DatePicker x:Name="Date" Height="26" Width="257"/>
+            <Button x:Name="Save" Content="Поставити у розклад" Width="258" Click="Save_Click" Margin="0,30,0,10" Height="30" Background="White"/>
+        </StackPanel>
+    </Grid>
+</Window>

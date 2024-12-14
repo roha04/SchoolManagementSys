@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>$(OutputPath)$(AssemblyName).xml</DocumentationFile>
+    <NoWarn>$(NoWarn),1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="Presentation\CreateAdvertisements.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Presentation\CreateClass.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Presentation\CreateParents.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Presentation\CreateSchedule.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Presentation\CreateSubject.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Presentation\CreateTeacher.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Presentation\CreateUser.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Presentation\LookUsers.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Presentation\CreateAdvertisements.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Presentation\CreateClass.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Presentation\CreateParents.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Presentation\CreateSchedule.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Presentation\CreateSubject.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Presentation\CreateTeacher.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Presentation\CreateUser.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Presentation\LookUsers.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Presentation\PupilWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
